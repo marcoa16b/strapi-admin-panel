@@ -1,0 +1,54 @@
+diff --git a/node_modules/@strapi/admin/admin/src/components/LeftMenu/index.js b/node_modules/@strapi/admin/admin/src/components/LeftMenu/index.js
+index d466ad4..e223b7e 100644
+--- a/node_modules/@strapi/admin/admin/src/components/LeftMenu/index.js
++++ b/node_modules/@strapi/admin/admin/src/components/LeftMenu/index.js
+@@ -96,7 +96,7 @@ const LeftMenu = ({ generalSectionLinks, pluginsSectionLinks }) => {
+ 
+   const menuTitle = formatMessage({
+     id: 'app.components.LeftMenu.navbrand.title',
+-    defaultMessage: 'Strapi Dashboard',
++    defaultMessage: 'My admin Dashboard',
+   });
+ 
+   return (
+@@ -107,7 +107,7 @@ const LeftMenu = ({ generalSectionLinks, pluginsSectionLinks }) => {
+           id: 'app.components.LeftMenu.navbrand.workplace',
+           defaultMessage: 'Workplace',
+         })}
+-        title={menuTitle}
++        title={'Admin Dashboard'}
+         icon={
+           <img
+             src={menu.custom || menu.default}
+diff --git a/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js b/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js
+index 1ec96b4..03ea4cf 100644
+--- a/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js
++++ b/node_modules/@strapi/admin/admin/src/pages/HomePage/HomeHeader.js
+@@ -21,13 +21,14 @@ const HomeHeader = ({ hasCreatedContentType, onCreateCT }) => {
+             {hasCreatedContentType
+               ? formatMessage({
+                   id: 'app.components.HomePage.welcome.again',
+-                  defaultMessage: 'Welcome 👋',
++                  defaultMessage: 'Bienvenido/a 👋',
+                 })
+               : formatMessage({
+                   id: 'app.components.HomePage.welcome',
+                   defaultMessage: 'Welcome on board!',
+                 })}
+           </Typography>
++          <h2>This is a change of content</h2>
+           <WordWrap textColor="neutral600" variant="epsilon">
+             {hasCreatedContentType
+               ? formatMessage({
+diff --git a/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js b/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js
+index 72836a4..614d52d 100644
+--- a/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js
++++ b/node_modules/@strapi/admin/admin/src/pages/HomePage/index.js
+@@ -82,6 +82,7 @@ const HomePage = () => {
+             <GridItem col={4} s={12}>
+               <SocialLinks />
+             </GridItem>
++            <h2>To say something</h2>
+           </Grid>
+         </Box>
+       </Main>
